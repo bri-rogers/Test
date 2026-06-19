@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GlitterGlow – 4th of July Glitter Stick | Red, White & Blue</title>
+  <meta name="description" content="Patriotic red, white & blue glitter stick for face, hair & body. Waterproof, sweat-proof, skin-friendly. Free shipping. Shop now!" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- ── ANNOUNCEMENT BAR ── -->
+<div class="announcement-bar">
+  <span>🎆 FREE SHIPPING on all orders &nbsp;|&nbsp; Limited 4th of July Stock – Order Now! 🎆</span>
+</div>
+
+<!-- ── HEADER ── -->
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a href="#" class="logo">
+      <span class="logo-icon">✦</span> GlitterGlow
+    </a>
+    <nav class="nav">
+      <a href="#features">Features</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <button class="cart-btn" id="cartBtn" aria-label="Open cart">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </div>
+</header>
+
+<!-- ── MAIN PRODUCT SECTION ── -->
+<main>
+  <section class="product-section">
+    <div class="container product-grid">
+
+      <!-- LEFT: Image Gallery -->
+      <div class="gallery">
+        <div class="main-image-wrap">
+          <div class="badge-wrap">
+            <span class="badge badge-sale">38% OFF</span>
+            <span class="badge badge-hot">🔥 Trending</span>
+          </div>
+          <div class="main-image" id="mainImage">
+            <div class="product-visual" id="productVisual">
+              <div class="glitter-can">
+                <div class="can-body">
+                  <div class="can-label">
+                    <div class="stripe red"></div>
+                    <div class="stripe white"></div>
+                    <div class="stripe blue"></div>
+                    <div class="can-stars">★ ★ ★</div>
+                    <div class="can-text">GLITTER<br>STICK</div>
+                    <div class="can-sub">4th of July Edition</div>
+                  </div>
+                </div>
+                <div class="can-cap"></div>
+                <div class="glitter-particles" id="particles"></div>
+              </div>
+            </div>
+          </div>
+          <button class="zoom-hint">Click to zoom</button>
+        </div>
+
+        <div class="thumbnails" id="thumbnails">
+          <button class="thumb active" data-idx="0" aria-label="View 1">
+            <div class="thumb-visual tw-rw"></div>
+          </button>
+          <button class="thumb" data-idx="1" aria-label="View 2">
+            <div class="thumb-visual tw-use"></div>
+          </button>
+          <button class="thumb" data-idx="2" aria-label="View 3">
+            <div class="thumb-visual tw-hex"></div>
+          </button>
+          <button class="thumb" data-idx="3" aria-label="View 4">
+            <div class="thumb-visual tw-star"></div>
+          </button>
+        </div>
+      </div>
+
+      <!-- RIGHT: Product Info -->
+      <div class="product-info">
+
+        <div class="brand-tag">Firstfly · Gold Star Seller ⭐</div>
+
+        <h1 class="product-title">4th of July Glitter Stick</h1>
+        <p class="product-subtitle">Red, White &amp; Blue Body &amp; Hair Sparkle</p>
+
+        <div class="rating-row">
+          <div class="stars" aria-label="4.8 out of 5 stars">
+            <span class="star filled">★</span><span class="star filled">★</span>
+            <span class="star filled">★</span><span class="star filled">★</span>
+            <span class="star half">★</span>
+          </div>
+          <a href="#reviews" class="rating-count">1,826 reviews</a>
+          <span class="sold-count">47.9K+ sold</span>
+        </div>
+
+        <div class="price-row">
+          <span class="price-current">$11.15</span>
+          <span class="price-original">$17.84</span>
+          <span class="price-save">Save $6.69</span>
+        </div>
+
+        <div class="shipping-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          Free Shipping &nbsp;·&nbsp; Arrives in 5–8 business days
+        </div>
+
+        <!-- Style variant -->
+        <div class="option-group">
+          <label class="option-label">Style: <strong id="selectedStyle">Hexagon Glitter</strong></label>
+          <div class="option-chips" id="styleChips">
+            <button class="chip active" data-value="Hexagon Glitter">Hexagon</button>
+            <button class="chip" data-value="Star Glitter">Star</button>
+            <button class="chip" data-value="Classic Glitter">Classic</button>
+          </div>
+        </div>
+
+        <!-- Quantity -->
+        <div class="option-group">
+          <label class="option-label">Quantity:</label>
+          <div class="qty-control">
+            <button class="qty-btn" id="qtyMinus" aria-label="Decrease quantity">−</button>
+            <span class="qty-value" id="qtyValue">1</span>
+            <button class="qty-btn" id="qtyPlus" aria-label="Increase quantity">+</button>
+          </div>
+        </div>
+
+        <!-- CTAs -->
+        <div class="cta-group">
+          <button class="btn btn-cart" id="addToCartBtn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+            Add to Cart
+          </button>
+          <button class="btn btn-buy" id="buyNowBtn">
+            Buy Now – $11.15
+          </button>
+        </div>
+
+        <!-- Trust badges -->
+        <div class="trust-row">
+          <div class="trust-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Secure Checkout
+          </div>
+          <div class="trust-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Easy Returns
+          </div>
+          <div class="trust-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            Free Shipping
+          </div>
+        </div>
+
+        <!-- TikTok Shop social proof -->
+        <div class="tiktok-proof">
+          <div class="tiktok-logo">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.79 1.53V6.77a4.85 4.85 0 01-1.02-.08z"/></svg>
+            TikTok Shop
+          </div>
+          <span>As seen on TikTok · 190.7K units sold</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── USP STRIP ── -->
+  <section class="usp-strip">
+    <div class="container usp-grid">
+      <div class="usp-item">
+        <div class="usp-icon">💧</div>
+        <h3>Waterproof</h3>
+        <p>Sweat-proof formula stays put all day and night</p>
+      </div>
+      <div class="usp-item">
+        <div class="usp-icon">✨</div>
+        <h3>Glide-On Easy</h3>
+        <p>No glue needed. Layer for subtle or bold looks</p>
+      </div>
+      <div class="usp-item">
+        <div class="usp-icon">🌸</div>
+        <h3>Skin-Friendly</h3>
+        <p>Gentle formula safe for all skin types</p>
+      </div>
+      <div class="usp-item">
+        <div class="usp-icon">🎨</div>
+        <h3>Multi-Use</h3>
+        <p>Face, hair, and body — total festival look</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FEATURES ── -->
+  <section class="features-section" id="features">
+    <div class="container">
+      <h2 class="section-title">Why You'll Love It</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-visual patriotic-swatch"></div>
+          <h3>Patriotic Color Formula</h3>
+          <p>Iconic red, white &amp; blue sparkle inspired by the American flag. Perfect for 4th of July, Memorial Day, and all patriotic celebrations.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-visual glitter-demo"></div>
+          <h3>Bold &amp; Buildable</h3>
+          <p>A single swipe gives you a sun-kissed shimmer. Layer up for full-on festival glam. You're in control of the intensity.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-visual allday-badge"></div>
+          <h3>All-Day Wear</h3>
+          <p>Waterproof and sweat-proof so your sparkle lasts from the parade to the fireworks show — no touch-ups needed.</p>
+        </div>
+      </div>
+
+      <div class="specs-table">
+        <h3>Product Specs</h3>
+        <table>
+          <tr><td>Net Weight</td><td>35g</td></tr>
+          <tr><td>Formula</td><td>Glitter gel (glue-free)</td></tr>
+          <tr><td>Finish</td><td>High-sparkle shimmer</td></tr>
+          <tr><td>Wear</td><td>Waterproof, sweat-proof</td></tr>
+          <tr><td>Skin Type</td><td>All skin types</td></tr>
+          <tr><td>Use</td><td>Face, hair, body</td></tr>
+          <tr><td>Styles Available</td><td>Hexagon Glitter, Star Glitter, Classic Glitter</td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── REVIEWS ── -->
+  <section class="reviews-section" id="reviews">
+    <div class="container">
+      <h2 class="section-title">What Customers Are Saying</h2>
+
+      <div class="rating-summary">
+        <div class="rating-big">4.8</div>
+        <div class="rating-details">
+          <div class="stars-large">★★★★★</div>
+          <div class="rating-sub">Based on 1,826 reviews</div>
+          <div class="rating-bars">
+            <div class="bar-row"><span>5 ★</span><div class="bar"><div class="bar-fill" style="width:82%"></div></div><span>82%</span></div>
+            <div class="bar-row"><span>4 ★</span><div class="bar"><div class="bar-fill" style="width:11%"></div></div><span>11%</span></div>
+            <div class="bar-row"><span>3 ★</span><div class="bar"><div class="bar-fill" style="width:4%"></div></div><span>4%</span></div>
+            <div class="bar-row"><span>2 ★</span><div class="bar"><div class="bar-fill" style="width:2%"></div></div><span>2%</span></div>
+            <div class="bar-row"><span>1 ★</span><div class="bar"><div class="bar-fill" style="width:1%"></div></div><span>1%</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar" style="background:#e74c3c">S</div>
+            <div>
+              <div class="reviewer-name">Sarah M. <span class="verified">✓ Verified</span></div>
+              <div class="review-stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="review-text">"Obsessed with this!! I wore it to our 4th of July BBQ and everyone kept asking where I got it. The glitter is SO pigmented — one swipe on my cheekbones and I was literally glowing. Lasted all day in the heat!"</p>
+          <div class="review-meta">Hexagon Glitter · June 30, 2025</div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar" style="background:#3498db">J</div>
+            <div>
+              <div class="reviewer-name">Jessica T. <span class="verified">✓ Verified</span></div>
+              <div class="review-stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="review-text">"Used this for my daughter's dance recital with a patriotic theme. It was perfect! Easy to apply, didn't irritate her skin at all, and washed off easily. Will definitely buy again for the 4th!"</p>
+          <div class="review-meta">Classic Glitter · July 3, 2025</div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar" style="background:#9b59b6">A</div>
+            <div>
+              <div class="reviewer-name">Amanda R. <span class="verified">✓ Verified</span></div>
+              <div class="review-stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="review-text">"Festival season essential! I've tried so many glitter products and this one is hands down the best. The glide-on formula means no mess and the staying power is incredible. Wore it through a 3-hour concert and it didn't budge."</p>
+          <div class="review-meta">Star Glitter · May 27, 2025</div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar" style="background:#e67e22">M</div>
+            <div>
+              <div class="reviewer-name">Madison K. <span class="verified">✓ Verified</span></div>
+              <div class="review-stars">★★★★☆</div>
+            </div>
+          </div>
+          <p class="review-text">"Really gorgeous glitter! The colors are vivid and patriotic. The only reason for 4 stars is that I wish the tube was a bit bigger, but honestly the formula makes a little go a long way. Great value for the price."</p>
+          <div class="review-meta">Hexagon Glitter · June 15, 2025</div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar" style="background:#1abc9c">B</div>
+            <div>
+              <div class="reviewer-name">Brittany L. <span class="verified">✓ Verified</span></div>
+              <div class="review-stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="review-text">"TikTok made me buy it and I have zero regrets. The star glitter style is literally the cutest thing I've ever put on my face. Bought 3 more as gifts for my friends for our 4th of July party!"</p>
+          <div class="review-meta">Star Glitter · June 28, 2025</div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar" style="background:#e74c3c">K</div>
+            <div>
+              <div class="reviewer-name">Kayla P. <span class="verified">✓ Verified</span></div>
+              <div class="review-stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="review-text">"Applied it to my hair and body for a pool party — it survived swimming!! I was shocked. The color payoff is amazing and it's so easy to use. Highly recommend to everyone!"</p>
+          <div class="review-meta">Hexagon Glitter · July 5, 2025</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FAQ ── -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="faq-list" id="faqList">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Is this safe for sensitive skin?
+            <span class="faq-arrow">▾</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes! Our formula is dermatologist-tested and gentle for all skin types, including sensitive skin. We recommend patch testing on a small area first if you have known skin allergies.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            How do I remove it?
+            <span class="faq-arrow">▾</span>
+          </button>
+          <div class="faq-answer">
+            <p>The glitter washes off easily with warm water and gentle soap or your regular makeup remover. No harsh scrubbing needed.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Can I use it on my hair?
+            <span class="faq-arrow">▾</span>
+          </button>
+          <div class="faq-answer">
+            <p>Absolutely! The formula works beautifully on hair, skin, and body. Apply to hair strands for a glittery, festive look and wash out easily with shampoo.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            How long does shipping take?
+            <span class="faq-arrow">▾</span>
+          </button>
+          <div class="faq-answer">
+            <p>Standard shipping takes 5–8 business days and is completely FREE. We recommend ordering at least a week before the 4th of July to ensure delivery in time!</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            What is your return policy?
+            <span class="faq-arrow">▾</span>
+          </button>
+          <div class="faq-answer">
+            <p>We offer hassle-free returns within 30 days of purchase. If you're not completely satisfied, contact us and we'll make it right with a full refund or replacement.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            What's the difference between Hexagon, Star, and Classic Glitter?
+            <span class="faq-arrow">▾</span>
+          </button>
+          <div class="faq-answer">
+            <p>The styles differ in glitter particle shape: Hexagon Glitter features geometric hexagonal particles for a modern look, Star Glitter has tiny star-shaped particles for a playful effect, and Classic Glitter uses traditional fine shimmer for an all-over glow.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BOTTOM CTA ── -->
+  <section class="bottom-cta">
+    <div class="container">
+      <div class="firework fw1">✦</div>
+      <div class="firework fw2">✦</div>
+      <div class="firework fw3">✦</div>
+      <h2>Ready to Sparkle This 4th of July?</h2>
+      <p>Join 47,900+ happy customers. Limited stock available!</p>
+      <div class="countdown-wrap">
+        <div class="countdown-label">Sale ends in:</div>
+        <div class="countdown" id="countdown">
+          <div class="cd-block"><span id="cdH">00</span><label>hrs</label></div>
+          <div class="cd-sep">:</div>
+          <div class="cd-block"><span id="cdM">00</span><label>min</label></div>
+          <div class="cd-sep">:</div>
+          <div class="cd-block"><span id="cdS">00</span><label>sec</label></div>
+        </div>
+      </div>
+      <button class="btn btn-buy btn-xl" id="ctaBuyBtn">
+        Get Yours – $11.15 (38% OFF)
+      </button>
+      <div class="bottom-trust">
+        🔒 Secure Payment &nbsp;·&nbsp; 🚚 Free Shipping &nbsp;·&nbsp; ↩ 30-Day Returns
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="#" class="logo">✦ GlitterGlow</a>
+      <p>Your go-to destination for festival &amp; celebration beauty.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Shop</h4>
+      <a href="#">All Products</a>
+      <a href="#">4th of July</a>
+      <a href="#">Festivals</a>
+      <a href="#">Party Looks</a>
+    </div>
+    <div class="footer-links">
+      <h4>Help</h4>
+      <a href="#">Shipping Policy</a>
+      <a href="#">Returns</a>
+      <a href="#">Contact Us</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="footer-links">
+      <h4>Follow Us</h4>
+      <a href="#">TikTok</a>
+      <a href="#">Instagram</a>
+      <a href="#">Pinterest</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© 2025 GlitterGlow. All rights reserved. &nbsp;|&nbsp; <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms of Service</a></p>
+      <div class="payment-icons">
+        <span class="pay-icon">VISA</span>
+        <span class="pay-icon">MC</span>
+        <span class="pay-icon">AMEX</span>
+        <span class="pay-icon">PayPal</span>
+        <span class="pay-icon">Shop Pay</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ── CART DRAWER ── -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-drawer-header">
+    <h3>Your Cart</h3>
+    <button class="cart-close" id="cartClose" aria-label="Close cart">✕</button>
+  </div>
+  <div class="cart-drawer-body" id="cartBody">
+    <div class="cart-empty" id="cartEmpty">
+      <div class="cart-empty-icon">🛒</div>
+      <p>Your cart is empty</p>
+      <button class="btn btn-cart" onclick="closeCart()">Continue Shopping</button>
+    </div>
+    <div id="cartItems" style="display:none"></div>
+  </div>
+  <div class="cart-drawer-footer" id="cartFooter" style="display:none">
+    <div class="cart-subtotal">
+      <span>Subtotal</span>
+      <span id="cartSubtotal">$0.00</span>
+    </div>
+    <p class="cart-ship-note">🚚 Free shipping on this order!</p>
+    <button class="btn btn-buy" style="width:100%" onclick="handleCheckout()">Proceed to Checkout</button>
+  </div>
+</div>
+
+<!-- ── TOAST ── -->
+<div class="toast" id="toast"></div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
