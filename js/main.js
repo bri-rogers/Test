@@ -1,42 +1,5 @@
 /* ── GLITTERGLOW – MAIN JS ── */
 
-/* ─── Glitter particle generator ─── */
-function spawnParticles() {
-  const container = document.getElementById('particles');
-  if (!container) return;
-
-  const colors = ['#c0392b','#ffffff','#1a3a6b','#f39c12','#e74c3c','#3498db','#f5f5f5'];
-  const count  = 20;
-
-  for (let i = 0; i < count; i++) {
-    const p = document.createElement('div');
-    p.className = 'particle';
-    const size  = Math.random() * 6 + 3;
-    const color = colors[Math.floor(Math.random() * colors.length)];
-    const tx    = (Math.random() - 0.5) * 200;
-    const ty    = -(Math.random() * 160 + 40);
-    const dur   = (Math.random() * 2 + 1.5).toFixed(2) + 's';
-    const delay = (Math.random() * 3).toFixed(2) + 's';
-    const left  = Math.random() * 100;
-    const top   = Math.random() * 100;
-
-    p.style.cssText = `
-      width: ${size}px;
-      height: ${size}px;
-      background: ${color};
-      left: ${left}%;
-      top: ${top}%;
-      --tx: ${tx}px;
-      --ty: ${ty}px;
-      --dur: ${dur};
-      --delay: ${delay};
-      animation-delay: ${delay};
-    `;
-    container.appendChild(p);
-  }
-}
-spawnParticles();
-
 /* ─── Cart state ─── */
 const cart = { items: [] };
 
@@ -173,13 +136,6 @@ function handleCheckout() {
 }
 
 /* ─── Thumbnail gallery switcher ─── */
-const thumbMeta = [
-  { bg: 'linear-gradient(135deg,#c0392b 33%,#f5f5f5 33% 66%,#1a3a6b 66%)', label: 'Main product' },
-  { bg: 'linear-gradient(135deg,#f9f9f9,#e0e0e0)', label: 'Application demo' },
-  { bg: 'radial-gradient(circle,#f39c12,#c0392b)', label: 'Hexagon glitter' },
-  { bg: 'radial-gradient(circle,#1a3a6b,#2c3e50)', label: 'Star glitter' },
-];
-
 document.getElementById('thumbnails').addEventListener('click', e => {
   const thumb = e.target.closest('.thumb');
   if (!thumb) return;
@@ -187,45 +143,27 @@ document.getElementById('thumbnails').addEventListener('click', e => {
   document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
   thumb.classList.add('active');
 
-  const idx     = Number(thumb.dataset.idx);
-  const visual  = document.getElementById('productVisual');
-  const meta    = thumbMeta[idx];
+  const idx    = Number(thumb.dataset.idx);
+  const mainImg = document.getElementById('mainImage');
 
-  visual.style.background = meta.bg;
   if (idx === 0) {
-    visual.innerHTML = `
-      <div class="glitter-can">
-        <div class="can-body">
-          <div class="can-label">
-            <div class="stripe red"></div>
-            <div class="stripe white"></div>
-            <div class="stripe blue"></div>
-            <div class="can-stars">★ ★ ★</div>
-            <div class="can-text">GLITTER<br>STICK</div>
-            <div class="can-sub">4th of July Edition</div>
-          </div>
-        </div>
-        <div class="can-cap"></div>
-        <div class="glitter-particles" id="particles"></div>
-      </div>
-    `;
-    spawnParticles();
+    mainImg.innerHTML = `<img src="images/product-main.jpeg" alt="Halilua Star Series Glitter Stick" id="productVisual" class="product-photo" />`;
   } else if (idx === 1) {
-    visual.innerHTML = `<div style="text-align:center;color:#555;padding:20px">
-      <div style="font-size:5rem">✨</div>
-      <p style="font-size:.9rem;margin-top:12px">Glide-On Application<br><small>No glue needed</small></p>
+    mainImg.innerHTML = `<div style="display:flex;align-items:center;justify-content:center;height:100%;text-align:center;color:#555;padding:20px">
+      <div><div style="font-size:5rem">✨</div>
+      <p style="font-size:.9rem;margin-top:12px">Glide-On Application<br><small>No glue needed</small></p></div>
     </div>`;
   } else if (idx === 2) {
-    visual.innerHTML = `<div style="text-align:center;padding:20px">
-      <div style="font-size:4rem">⬡</div>
+    mainImg.innerHTML = `<div style="display:flex;align-items:center;justify-content:center;height:100%;text-align:center;padding:20px">
+      <div><div style="font-size:4rem">⬡</div>
       <p style="font-size:.9rem;margin-top:12px;color:#555">Hexagon Glitter Style</p>
-      <div style="font-size:2rem;margin-top:8px">🔴⚪🔵</div>
+      <div style="font-size:2rem;margin-top:8px">🔴⚪🔵</div></div>
     </div>`;
   } else {
-    visual.innerHTML = `<div style="text-align:center;padding:20px">
-      <div style="font-size:4rem">⭐</div>
+    mainImg.innerHTML = `<div style="display:flex;align-items:center;justify-content:center;height:100%;text-align:center;padding:20px">
+      <div><div style="font-size:4rem">⭐</div>
       <p style="font-size:.9rem;margin-top:12px;color:#555">Star Glitter Style</p>
-      <div style="font-size:2rem;margin-top:8px">🔴⚪🔵</div>
+      <div style="font-size:2rem;margin-top:8px">🔴⚪🔵</div></div>
     </div>`;
   }
 });
